@@ -6,9 +6,7 @@ import image from "./assets/illustration-sign-up-desktop.svg";
 
 function App() {
   const {
-    register,
     handleSubmit,
-    reset,
     control,
     formState: { errors },
   } = useForm();
