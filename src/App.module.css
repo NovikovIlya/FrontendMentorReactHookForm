@@ -8,9 +8,10 @@
 }
 .ulStyle{
     text-align: start;
+    padding-left: 10px;
 }
 .liStyle{
-    padding-left: 5px;
+    padding-left: 10px;
     margin-bottom: 5px;
 }
 li::marker {
@@ -20,6 +21,7 @@ li::marker {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 10px;
 }
 .head{
     display: flex;
@@ -29,6 +31,8 @@ li::marker {
 .btn{
     width: 100%;
     margin-top: 10px;
+    background-color: black;
+    height: 40px;
 }
 .lab{
 
@@ -39,4 +43,11 @@ li::marker {
 .errorBg{
     background-color: #FFE8E6;
     color:red;
+}
+.errorBg:hover{
+    background-color: #FFE8E6;
+}
+.headMain{
+    font-size: 60px;
+    
 }

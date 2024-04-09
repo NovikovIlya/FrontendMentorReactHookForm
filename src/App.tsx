@@ -27,21 +27,27 @@ function App() {
   return (
     <div className={styles.container}>
       <div className={styles.left}>
-        <h1>Stay updated!</h1>
+        <h1 className={styles.headMain}>Stay updated!</h1>
         <p>Join 60000+ product managers receiving monthly updaten on:</p>
         <ul className={styles.ulStyle}>
-          <li className={styles.liStyle}>Product discovery</li>
-          <li className={styles.liStyle}>Measuring</li>
+          <li className={styles.liStyle}>
+            Product discovery and building what matters
+          </li>
+          <li className={styles.liStyle}>
+            Measuring to ensure updates are a succes
+          </li>
           <li className={styles.liStyle}>and much more </li>
         </ul>
 
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className={styles.head} >
+          <div className={styles.head}>
             <label htmlFor="email" className={styles.lab}>
               E-mail adress
             </label>
             {errors?.email?.message ? (
-              <div className={styles.error}>{errors.email.message.toString()}</div>
+              <div className={styles.error}>
+                {errors.email.message.toString()}
+              </div>
             ) : (
               ""
             )}
@@ -54,10 +60,11 @@ function App() {
               validate: isValid || "That URL is not valid!",
             }}
             render={({ field }) => (
-              <Input 
-              placeholder="enter email" 
-              id="email" {...field} 
-              className={`${errors?.email?.message ? styles.errorBg : ''}`}
+              <Input
+                placeholder="enter email"
+                id="email"
+                {...field}
+                className={`${errors?.email?.message ? styles.errorBg : ""}`}
               />
             )}
           />
