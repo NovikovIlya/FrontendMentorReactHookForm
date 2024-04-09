@@ -1,6 +1,6 @@
 import "./App.css";
 import { Controller, useForm } from "react-hook-form";
-import { Button, Input, message, Space } from "antd";
+import { Button, Input, message } from "antd";
 import styles from "./App.module.css";
 import image from "./assets/illustration-sign-up-desktop.svg";
 
@@ -12,7 +12,7 @@ function App() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: any) => {
+  const onSubmit = () => {
     success()
   };
 
@@ -22,7 +22,7 @@ function App() {
       content: "Subscribe succesful!",
     });
   };
-  
+
   const isValid = (text: string) => {
     const pattern =
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
